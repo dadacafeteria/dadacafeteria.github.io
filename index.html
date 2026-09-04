@@ -39,16 +39,13 @@
       "addressLocality": "Lille",
       "addressCountry": "FR"
     },
-    "telephone": "+33 3 20 30 77 91",
     "email": "dadacafet@gmail.com",
     "priceRange": "€€",
     "hasMenu": "https://dadacafeteria.github.io/#carte",
-    "acceptsReservations": "True",
     "sameAs": ["https://www.instagram.com/dadacafeteria/"],
     "openingHoursSpecification": [
-      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday"], "opens": "09:00", "closes": "19:00" },
-      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "09:00", "closes": "23:59" },
-      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "11:30", "closes": "15:00" }
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Monday", "opens": "11:00", "closes": "19:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "19:00" }
     ]
   }
   </script>
@@ -76,12 +73,10 @@
     <nav class="nav__links" aria-label="Navigation principale">
       <a href="#lieu">Le lieu</a>
       <a href="#carte">La carte</a>
-      <a href="#ateliers">Ateliers</a>
-      <a href="#evenements">Privatisation</a>
       <a href="#instagram">Insta</a>
       <a href="#infos">Infos</a>
     </nav>
-    <a href="#reserver" class="btn btn--nav">Réserver</a>
+    <a href="#contact" class="btn btn--nav">Nous écrire</a>
     </div>
     <button class="nav__burger" id="burger" aria-label="Menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -95,7 +90,7 @@
       <h1 class="hero__logo"><img src="assets/logo-dada.png" alt="" width="1100" height="647">
         <span class="sr-only">DADA — café, cafétéria &amp; bar à Lille</span></h1>
       <p class="hero__tagline">On y <strong class="c-bleu">VIT</strong>, on y <strong class="c-rouge">MANGE</strong>, on y <strong class="c-rouge">CRÉE.</strong></p>
-      <p class="hero__sub">Produits frais, pour la majorité locaux et bio, du fait maison et un petit vent de liberté — ouvert du lundi au samedi, 169 rue Pierre Mauroy.</p>
+      <p class="hero__sub">Produits frais et de saison, plats végétariens et vegan, pour la majorité locaux et bio, du fait maison et un petit vent de liberté — ouvert du lundi au vendredi, 169 rue Pierre Mauroy.</p>
       <div class="hero__cta">
         <a href="#carte" class="btn btn--primary">Voir la carte</a>
       </div>
@@ -177,37 +172,8 @@
   </section>
 
   <!-- ================= LE LIEU ================= -->
+  <!-- « DADA c'est quoi ? » + les 3 qualités retirés le 04/09 : déjà dit dans le hero. -->
   <section class="lieu" id="lieu">
-    <div class="section-head">
-      <span class="section-label">Le lieu</span>
-      <h2 class="display">DADA, c'est quoi&nbsp;?</h2>
-      <p class="section-intro">
-        Un café <strong>vivant</strong>, en plein cœur de Lille. Un lieu de vie et de bouche,
-        à la fois café du matin, cafétéria du midi, pause goûter et <strong>bar</strong> le soir —
-        un lieu vivant et animé, entre concerts et spectacles.
-        Une esthétique libre, un brin absurde, toujours joyeuse, clin d'œil au mouvement Dada,
-        qui prône la liberté de création.
-      </p>
-    </div>
-
-    <div class="qualites">
-      <article class="qualite">
-        <div class="qualite__ico">🥕</div>
-        <h3>Ses produits frais, cuisinés &amp; bio</h3>
-        <p>Fournisseurs pour la majorité locaux, produits de saison et bio autant que possible. Tout est fait maison — une cuisine éthique, sans chichis, et on mange bon.</p>
-      </article>
-      <article class="qualite">
-        <div class="qualite__ico">☕</div>
-        <h3>Sa convivialité</h3>
-        <p>Un vrai café de quartier&nbsp;: chaleur humaine, cadre accueillant, terrasse ensoleillée l'après-midi. On vient, on revient.</p>
-      </article>
-      <article class="qualite">
-        <div class="qualite__ico">⭐</div>
-        <h3>Sa fantaisie</h3>
-        <p>Déco arty, mise en avant d'artistes locaux, cadavres exquis et ateliers. Un café qui nourrit le corps et l'imaginaire.</p>
-      </article>
-    </div>
-
     <div class="soeurs">
       <div class="soeurs__photo">
         <figure class="soeurs__figure">
@@ -262,18 +228,11 @@
             <li><span>En formule (+ grignotage ou dessert)</span><b>+3,5€</b></li>
             <li><span>Formule enfant</span></li>
           </ul>
-          <p class="menu-col__note">Demandez-nous le menu du jour&nbsp;!</p>
         </div>
         <div class="menu-col">
           <h3 class="menu-col__title">À grignoter, à toute heure</h3>
-          <p class="menu-col__note">Grignotages sucrés &amp; salés toute la journée.</p>
-          <ul class="menu-list">
-            <li><span>Salades originales</span></li>
-            <li><span>Sandwiches &amp; pains grillés</span></li>
-            <li><span>Chaussons &amp; douceurs maison</span></li>
-            <li><span>Petit-déjeuner (9h–11h) &amp; goûter (15h–18h)</span></li>
-          </ul>
-          <p class="menu-col__note">Carte complète à consulter sur place.</p>
+          <p class="menu-col__note">Sucré, salé, ça dépend des jours et de l'humeur de la cuisine&nbsp;: de quoi grignoter du matin au goûter, toujours fait maison.</p>
+          <p class="menu-col__note">Ce qu'il y a aujourd'hui&nbsp;? C'est sur l'ardoise, ou sur <a href="https://www.instagram.com/dadacafeteria/" target="_blank" rel="noopener">Instagram</a>.</p>
         </div>
       </div>
     </div>
@@ -399,35 +358,12 @@
     <p class="carte__foot">Carte indicative, susceptible d'évoluer au fil des saisons et des envies. 🐎</p>
   </section>
 
-  <!-- ================= ATELIERS ================= -->
-  <section class="ateliers" id="ateliers">
-    <div class="section-head">
-      <span class="section-label">Ateliers &amp; vie du lieu</span>
-      <h2 class="display">On y crée, aussi</h2>
-      <p class="section-intro">Une à deux fois par semaine, DADA ouvre ses ateliers — pour les petits et les grands. Un espace de rencontre, de partage et d'ouverture, où l'on dessine, on assemble des cadavres exquis, on bricole. Et le soir venu, l'ambiance change : place au bar, aux concerts et aux spectacles.</p>
-    </div>
-    <div class="cards">
-      <article class="card card--rose">
-        <h3>Ateliers créatifs</h3>
-        <p>Dessin, collage, DIY… 1 à 2 fois par semaine, pour adultes et enfants. Suivez l'agenda sur Instagram.</p>
-      </article>
-      <article class="card card--bleuclair">
-        <h3>Galerie &amp; expos</h3>
-        <p>Une petite galerie qui met en lumière les artistes locaux — dont ceux qui ont habillé les murs du lieu. Les murs changent, le lieu vit.</p>
-      </article>
-      <article class="card card--jaune">
-        <h3>Bar, concerts &amp; spectacles</h3>
-        <p>Le soir venu, place au bar. De temps en temps, un concert, un live ou un spectacle&nbsp;: l'agenda est sur Instagram.</p>
-      </article>
-    </div>
-  </section>
-
   <!-- ================= INSTAGRAM ================= -->
   <section class="insta" id="instagram">
     <div class="section-head">
       <span class="section-label">@dadacafeteria</span>
       <h2 class="display">Tout est sur Insta.</h2>
-      <p class="section-intro">La carte de la semaine, les ateliers, les concerts, les horaires du week-end&nbsp;: tout se passe là-bas, avec un cheval super mignon. On y vit aussi.</p>
+      <p class="section-intro">La carte de la semaine, les nouveautés, les horaires&nbsp;: tout se passe là-bas, avec un cheval super mignon. On y vit aussi.</p>
     </div>
     <div class="insta__grid">
       <div class="insta__embed">
@@ -453,91 +389,7 @@
           <a href="https://www.instagram.com/dadacafeteria/" target="_blank" rel="noopener" class="insta__more">+ la suite<br>sur Insta</a>
         </div>
         <a href="https://www.instagram.com/dadacafeteria/" target="_blank" rel="noopener" class="btn btn--primary insta__follow">📷 Suivre @dadacafeteria</a>
-        <p class="insta__hint">Stories, agenda des soirées, menu du jour&nbsp;: c'est là que ça se passe.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= PRIVATISATION / EVENEMENTS ================= -->
-  <section class="evenements" id="evenements">
-    <div class="evenements__inner">
-      <div class="evenements__text">
-        <span class="section-label section-label--light">Privatisation</span>
-        <h2 class="display display--white">Votre événement,<br>version DADA</h2>
-        <p>
-          Soirée privée, anniversaire, lancement, concert, atelier créatif…
-          On privatise le lieu (ou une partie) et on imagine ensemble la formule
-          qui vous ressemble : cuisine maison sous forme de buffet (ou sur mesure),
-          boissons et ambiance arty.
-        </p>
-        <ul class="evenements__list">
-          <li><strong>Soirées privées</strong> — cocktails, en-cas à partager, bar à bières &amp; vins nature</li>
-          <li><strong>Anniversaires &amp; repas de groupe</strong> — sur place, faits maison</li>
-          <li><strong>Concerts &amp; événements</strong> — sur demande, le soir</li>
-          <li><strong>Ateliers créatifs sur mesure</strong> — pour souder vos équipes autrement</li>
-        </ul>
-        <p class="evenements__cap">Buffet ou formule sur mesure — capacité, formules et devis&nbsp;: dites-nous tout via le formulaire ci-contre.</p>
-      </div>
-
-      <!-- FORM -->
-      <div class="evenements__form" id="reserver">
-        <form id="resa-form" class="resa" novalidate>
-          <h3 class="resa__title">Demande de réservation / privatisation</h3>
-          <p class="resa__hint">Réservations &amp; privatisations le soir, sur demande.</p>
-
-          <div class="resa__row">
-            <label>Nom &amp; prénom
-              <input type="text" name="nom" required placeholder="Camille Durand">
-            </label>
-          </div>
-          <div class="resa__grid">
-            <label>Email
-              <input type="email" name="email" required placeholder="vous@email.com">
-            </label>
-            <label>Téléphone
-              <input type="tel" name="tel" placeholder="06 00 00 00 00">
-            </label>
-          </div>
-          <div class="resa__grid">
-            <label>Votre demande
-              <select name="type" required>
-                <option value="">Choisir…</option>
-                <optgroup label="Privatisation (buffet ou sur mesure)">
-                  <option>Soirée privée</option>
-                  <option>Anniversaire</option>
-                  <option>Concert / soirée</option>
-                  <option>Atelier créatif</option>
-                  <option>Autre privatisation</option>
-                </optgroup>
-              </select>
-            </label>
-            <label>Nombre de personnes <small>(max 50)</small>
-              <input type="number" name="pax" min="1" max="50" placeholder="20">
-            </label>
-          </div>
-          <div class="resa__grid">
-            <label>Date souhaitée
-              <input type="date" name="date">
-            </label>
-            <label>Créneau
-              <select name="creneau">
-                <option value="">Choisir…</option>
-                <option>Soirée (à partir de 19h)</option>
-                <option>Autre — à préciser</option>
-              </select>
-            </label>
-          </div>
-          <div class="resa__row">
-            <label>Votre message
-              <textarea name="message" rows="3" placeholder="Dites-nous tout : occasion, envies, budget, besoins particuliers…"></textarea>
-            </label>
-          </div>
-          <button type="submit" class="btn btn--primary btn--block">Envoyer ma demande</button>
-          <p class="resa__direct">
-            <a href="#" data-resa-mail>✉️ Écrire directement</a>
-            <a href="https://www.instagram.com/dadacafeteria/" target="_blank" rel="noopener">📷 @dadacafeteria</a>
-          </p>
-        </form>
+        <p class="insta__hint">Stories, menu du jour, nouvelles du lieu&nbsp;: c'est là que ça se passe.</p>
       </div>
     </div>
   </section>
@@ -556,18 +408,13 @@
 
         <h3>🕒 Horaires</h3>
         <ul class="hours">
-          <li><span>Lundi – Jeudi</span><b>9h – 19h</b></li>
-          <li><span>Vendredi</span><b>9h – minuit</b></li>
-          <li><span>Samedi</span><b>11h30 – 15h</b></li>
-          <li><span>Dimanche</span><b>Fermé</b></li>
+          <li><span>Lundi</span><b>11h – 19h</b></li>
+          <li><span>Mardi – Vendredi</span><b>9h – 19h</b></li>
           <li class="hours__event" data-until="2026-09-07"><span>Braderie · ven. 4 → dim. 6</span><b>ven 9h–2h · sam 8h–2h · dim 8h–21h</b></li>
           <li class="hours__event" data-until="2026-09-08"><span>Lundi 7</span><b>11h – 15h</b></li>
           <li class="hours__event" data-until="2026-09-10"><span>Après la Braderie</span><b>fermé mar. 8 &amp; mer. 9</b></li>
         </ul>
-        <p class="infos__small"><strong>Le soir</strong>, bar et privatisations sur demande&nbsp;; de temps en temps un concert ou un spectacle. L'agenda est sur Instagram.</p>
-
-        <h3>☎️ Téléphone</h3>
-        <p><a href="tel:+33320307791">03 20 30 77 91</a></p>
+        <p class="infos__small"><strong>Le soir</strong>, il arrive qu'on reste ouvert&nbsp;: l'agenda est sur Instagram.</p>
 
         <h3>📷 Suivre DADA</h3>
         <p><a href="https://www.instagram.com/dadacafeteria/" target="_blank" rel="noopener">@dadacafeteria</a></p>
@@ -581,6 +428,19 @@
     </div>
   </section>
 
+  <!-- ============ NOUS ÉCRIRE (remplace le formulaire de résa, retiré le 04/09) ============ -->
+  <section class="contact" id="contact">
+    <div class="contact__inner">
+      <span class="section-label section-label--light">Nous écrire</span>
+      <h2 class="display display--white">Une question&nbsp;?<br>Une envie&nbsp;?</h2>
+      <p class="contact__lead">Un groupe, une occasion particulière, une curiosité&nbsp;: écrivez-nous ou passez par Instagram, on vous répond.</p>
+      <div class="contact__cta">
+        <a href="mailto:dadacafet@gmail.com" class="btn btn--jaune">✉️ Nous écrire</a>
+        <a href="https://www.instagram.com/dadacafeteria/" target="_blank" rel="noopener" class="btn btn--ghost btn--ghost-light">📷 @dadacafeteria</a>
+      </div>
+    </div>
+  </section>
+
   <!-- ================= FOOTER ================= -->
   <footer class="footer">
     <div class="footer__inner">
@@ -588,7 +448,7 @@
       <p class="footer__tag">Tout est dada. Tout est fait maison — cuisine éthique pour tous.</p>
       <div class="footer__links">
         <a href="#carte">La carte</a>
-        <a href="#evenements">Privatisation</a>
+        <a href="#contact">Nous écrire</a>
         <a href="https://www.instagram.com/dadacafeteria/" target="_blank" rel="noopener">Instagram</a>
       </div>
       <p class="footer__legal">
