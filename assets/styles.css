@@ -1,0 +1,445 @@
+/* =========================================================
+   DADA Cafétéria — charte graphique
+   Couleurs (COULEURS V3) · Polices : Rubik (principale),
+   Antonio (secondaire), Inter (soutien)
+   ========================================================= */
+
+:root{
+  --rouge:#DF3221;      /* rouge ketchup  */
+  --jaune:#F5D600;      /* jaune d'oeuf   */
+  --vert:#2D6548;       /* vert cornichon */
+  --bleu-clair:#87AFCE; /* bleu glaçon    */
+  --bleu:#2F4088;       /* bleu franc     */
+  --rose:#ECB1C5;       /* rose chewing gum */
+  --noir:#282020;       /* trou noir      */
+  --blanc:#F0EBEB;      /* blanc lait     */
+
+  --maxw:1180px;
+  --r:16px;
+  --shadow:0 10px 30px rgba(40,32,32,.10);
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{
+  font-family:'Inter',system-ui,sans-serif;
+  color:var(--noir);
+  background:var(--blanc);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit}
+img{max-width:100%;display:block}
+
+/* ---------- Typo display (Antonio) ---------- */
+.display{
+  font-family:'Antonio',sans-serif;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  line-height:1;
+  color:var(--bleu);
+  font-size:clamp(2.2rem,5vw,3.6rem);
+}
+.display--white{ color:var(--blanc); }
+.display--sm{ font-size:clamp(1.8rem,4vw,2.6rem); }
+.c-rouge{color:var(--rouge)}
+.c-bleu{color:var(--bleu)}
+
+/* ---------- Boutons ---------- */
+.btn{
+  display:inline-block;
+  font-family:'Rubik',sans-serif;
+  font-weight:700;
+  font-size:1rem;
+  text-decoration:none;
+  padding:.85rem 1.5rem;
+  border:none;
+  border-radius:999px;
+  cursor:pointer;
+  transition:transform .15s ease, box-shadow .15s ease;
+}
+.btn:hover{ transform:translateY(-2px) rotate(-1.5deg); }
+.btn--primary{ background:var(--rouge); color:#fff; box-shadow:3px 3px 0 var(--bleu); }
+.btn--jaune{ background:var(--jaune); color:var(--noir); box-shadow:3px 3px 0 var(--bleu); }
+.btn--ghost{ background:transparent; color:var(--bleu); border:2.5px solid var(--bleu); }
+.btn--nav{ background:var(--rouge); color:#fff; padding:.55rem 1.2rem; font-size:.95rem; }
+.btn--block{ width:100%; text-align:center; }
+
+/* =========================================================
+   BRADERIE (temporaire : défilant + section) — à retirer après le 06/09
+   ========================================================= */
+/* rayures rouge/rose du visuel « Tout est dada. » + pastilles blanc lait, Rubik 900 bleu */
+.marquee{
+  display:block;overflow:hidden;text-decoration:none;
+  background:repeating-linear-gradient(90deg, var(--rouge) 0 22px, var(--rose) 22px 44px);
+  border-bottom:3px solid var(--bleu);
+  padding:.5rem 0;
+}
+.marquee__track{ display:flex;align-items:center;gap:.7rem;width:max-content;padding-left:.7rem;animation:defile 46s linear infinite; }
+.marquee__item{
+  white-space:nowrap;background:var(--blanc);color:var(--bleu);
+  font-family:'Rubik',sans-serif;font-weight:900;font-size:.98rem;letter-spacing:.2px;line-height:1;
+  padding:.42rem .95rem;border-radius:999px;box-shadow:2px 2px 0 var(--bleu);
+}
+.marquee__item:nth-child(odd){ transform:rotate(-1.2deg); }
+.marquee__item:nth-child(even){ transform:rotate(1deg); }
+.marquee:hover .marquee__track{ animation-play-state:paused; }
+@keyframes defile{ from{transform:translateX(0)} to{transform:translateX(-50%)} }
+@media (prefers-reduced-motion:reduce){ .marquee__track{ animation:none; } }
+
+.braderie{ background:var(--rouge);color:var(--blanc);border-bottom:14px solid var(--jaune); }
+.braderie__inner{ max-width:var(--maxw);margin:0 auto;display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(2rem,5vw,4rem);align-items:center; }
+.braderie .section-label--light{ color:var(--jaune); }
+.braderie .display{ margin:.2rem 0 1rem;font-size:clamp(2.6rem,6vw,4.4rem); }
+.braderie__lead{ font-size:1.12rem;max-width:560px;margin-bottom:1.5rem; }
+.braderie__lead strong{ color:var(--jaune); }
+.braderie__cta{ display:flex;gap:1rem;flex-wrap:wrap;align-items:center; }
+.btn--ghost-light{ color:var(--blanc);border-color:var(--blanc); }
+.braderie__note{ font-size:.92rem;opacity:.92;margin-top:1.1rem; }
+.braderie__note a{ color:var(--jaune);font-weight:600; }
+.braderie__visual{ position:relative;display:flex;justify-content:center;padding:5.6rem 0 1rem; }
+/* encart menu Braderie + photo de l'an dernier (04/09/2026, temporaire comme la section) */
+.braderie__menu{ max-width:var(--maxw);margin:clamp(2rem,4vw,3rem) auto 0;display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(1.2rem,3vw,2rem);align-items:stretch; }
+.braderie__photo{ margin:0;position:relative;border-radius:var(--r);overflow:hidden;background:var(--bleu);min-height:260px; }
+.braderie__photo img{ width:100%;height:100%;object-fit:cover;position:absolute;inset:0; }
+.braderie__photo figcaption{ position:absolute;left:0;right:0;bottom:0;padding:1.6rem .9rem .7rem;font-family:'Rubik';font-weight:500;font-size:.8rem;color:var(--blanc);background:linear-gradient(to top,rgba(40,32,32,.75),transparent); }
+.braderie__photo figcaption a{ color:var(--jaune); }
+.braderie__card{ box-shadow:var(--shadow); }
+.braderie__cols{ display:grid;grid-template-columns:1.3fr .7fr;gap:0 1.6rem; }
+.braderie__cols .menu-subhead{ margin-top:.2rem; }
+.braderie__cols .menu-col__note{ margin-top:.8rem; }
+.braderie__cols .menu-col__note a{ color:var(--rouge);font-weight:600; }
+.braderie__dates{ display:flex;gap:.7rem; }
+.braderie__day{
+  background:var(--blanc);color:var(--noir);border-radius:var(--r);
+  width:clamp(96px,10vw,130px);padding:1rem .5rem 1.1rem;text-align:center;
+  box-shadow:5px 5px 0 var(--bleu);display:flex;flex-direction:column;align-items:center;
+}
+.braderie__day b{ font-family:'Rubik';font-weight:700;text-transform:uppercase;letter-spacing:1px;font-size:.78rem;color:var(--bleu); }
+.braderie__day em{ font-family:'Antonio';font-style:normal;font-weight:700;font-size:clamp(3rem,5vw,4.4rem);line-height:1;color:var(--rouge);margin:.15rem 0; }
+.braderie__day small{ font-family:'Rubik';font-weight:500;font-size:.68rem;color:#6b5d5d;line-height:1.15; }
+.tampon--big{ width:150px;height:150px;font-size:1.15rem;right:-24px;top:-30px;background:var(--jaune);color:var(--noir);transform:rotate(-10deg); }
+
+/* =========================================================
+   NAV
+   ========================================================= */
+.nav{
+  position:sticky;top:0;z-index:50;
+  display:flex;align-items:center;gap:1.5rem;
+  padding:.7rem clamp(1rem,4vw,2.5rem);
+  background:rgba(240,235,235,.92);
+  backdrop-filter:blur(8px);
+  border-bottom:3px solid var(--bleu);
+}
+.nav__logo{ text-decoration:none; flex-shrink:0; display:flex; align-items:center; }
+.nav__logo-img{ height:38px; width:auto; }
+/* display:contents : sur grand ecran le panneau n'existe pas, ses enfants
+   restent des elements directs de la barre flex. */
+.nav__panel{ display:contents; }
+.nav__links{ display:flex; gap:1.4rem; margin-left:auto; flex-wrap:wrap; }
+.nav__links a{
+  font-family:'Rubik',sans-serif;font-weight:500;
+  text-decoration:none;font-size:.98rem;
+  padding:.2rem 0;border-bottom:2px solid transparent;
+  transition:border-color .15s, color .15s;
+}
+.nav__links a:hover{ color:var(--rouge); border-color:var(--rouge); }
+.nav .btn--nav{ flex-shrink:0; }
+.nav__burger{ display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:.4rem; }
+.nav__burger span{ width:26px;height:3px;background:var(--bleu);border-radius:2px;transition:.2s; }
+
+/* =========================================================
+   HERO
+   ========================================================= */
+.hero{
+  position:relative;overflow:hidden;
+  text-align:center;
+  padding:clamp(3rem,9vw,6.5rem) 1.5rem calc(clamp(3rem,7vw,5rem) + 14px);
+}
+.hero__inner{ position:relative;z-index:1;max-width:860px;margin:0 auto; }
+.hero__logo{ margin:.4rem auto .6rem; }
+.hero__logo img{ width:clamp(280px,55vw,560px);height:auto;margin:0 auto;filter:drop-shadow(0 8px 18px rgba(40,32,32,.18)); }
+
+/* ---------- Tampons (la signature DADA : rond, penché, Rubik italique) ---------- */
+.tampon{
+  position:absolute;width:132px;height:132px;border-radius:50%;
+  display:grid;place-items:center;text-align:center;text-decoration:none;
+  font-family:'Rubik';font-weight:900;font-style:italic;text-transform:uppercase;
+  font-size:1.02rem;line-height:1.02;
+  border:4px solid var(--blanc);box-shadow:var(--shadow);
+  transition:transform .2s ease;
+}
+.tampon small{ display:block;font-size:.62rem;font-weight:700;font-style:normal;letter-spacing:.5px;margin-top:.3rem;opacity:.85; }
+
+.hero__kicker{
+  font-family:'Rubik',sans-serif;font-weight:700;text-transform:uppercase;
+  letter-spacing:2px;font-size:.8rem;color:var(--bleu);margin-bottom:.6rem;
+}
+.hero__tagline{
+  font-family:'Antonio',sans-serif;font-weight:700;text-transform:uppercase;
+  font-size:clamp(1.4rem,4vw,2.4rem);letter-spacing:1px;margin:.8rem 0 .4rem;
+  color:var(--bleu);
+}
+.hero__sub{ max-width:620px;margin:.4rem auto 1.8rem;font-size:1.08rem; }
+.hero__cta{ display:flex;gap:1rem;justify-content:center;flex-wrap:wrap; }
+/* ruban des 6 couleurs V3, pleine largeur, en pied de hero */
+.hero__swatches{ position:absolute;left:0;right:0;bottom:0;display:flex; }
+.hero__swatches span{ flex:1;height:14px;display:block; }
+
+/* =========================================================
+   BRUNCH
+   ========================================================= */
+.brunch{ background:var(--bleu); color:var(--blanc); padding:clamp(3rem,7vw,5.5rem) clamp(1rem,4vw,2.5rem); }
+.brunch__inner{ max-width:var(--maxw);margin:0 auto;display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,5vw,4rem);align-items:center; }
+.badge{ display:inline-block;font-family:'Rubik';font-weight:700;text-transform:uppercase;letter-spacing:1px;font-size:.72rem;padding:.3rem .8rem;border-radius:999px;margin-bottom:1rem; }
+.badge--jaune{ background:var(--jaune);color:var(--noir); }
+.brunch__when{ font-family:'Rubik';font-weight:700;color:var(--jaune);font-size:1.15rem;margin:.6rem 0 1rem; }
+.brunch__desc{ font-size:1.05rem;margin-bottom:1.3rem;opacity:.95; }
+.brunch__list{ list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:.4rem 1.2rem;margin-bottom:1.8rem; }
+.brunch__list li{ position:relative;padding-left:1.4rem;font-weight:500; }
+.brunch__list li::before{ content:"🐎";position:absolute;left:0;font-size:.85rem; }
+.brunch__cta{ display:flex;align-items:center;gap:1rem;flex-wrap:wrap; }
+.brunch__note{ font-size:.85rem;opacity:.8; }
+.brunch__visual{ position:relative; }
+.brunch__stamp{
+  position:absolute;bottom:-22px;left:-22px;
+  width:120px;height:120px;border-radius:50%;
+  background:var(--rouge);color:#fff;
+  display:grid;place-items:center;text-align:center;
+  font-family:'Rubik';font-weight:900;font-style:italic;text-transform:uppercase;
+  font-size:1.05rem;line-height:1;transform:rotate(-12deg);
+  border:4px solid var(--blanc);box-shadow:var(--shadow);
+}
+
+/* ---------- Galerie brunch ---------- */
+.brunch__gallery{ display:grid; grid-template-columns:1fr 1fr; gap:.7rem; }
+.brunch__gallery img{ width:100%; height:100%; object-fit:cover; border-radius:14px; box-shadow:var(--shadow); }
+.brunch__gallery .bg-main{ grid-column:1 / -1; aspect-ratio:16/10; }
+.brunch__gallery img:not(.bg-main){ aspect-ratio:1/1; }
+
+/* ---------- Photo des sœurs / équipe ---------- */
+.soeurs__figure{ margin:0; }
+.soeurs__figure img{ width:100%; border-radius:var(--r); box-shadow:var(--shadow); }
+.soeurs__figure figcaption{ font-family:'Rubik';font-weight:500;font-size:.85rem;color:var(--bleu);margin-top:.7rem;text-align:center; }
+
+/* ---------- Galerie de la carte ---------- */
+.carte-gallery{ max-width:var(--maxw); margin:2.5rem auto 0; display:grid; grid-template-columns:repeat(4,1fr); gap:1rem; }
+.carte-gallery figure{ margin:0; }
+.carte-gallery img{ width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:var(--r); border:3px solid var(--blanc); box-shadow:var(--shadow); }
+
+/* =========================================================
+   SECTIONS génériques
+   ========================================================= */
+section{ padding:clamp(3rem,7vw,5.5rem) clamp(1rem,4vw,2.5rem); }
+.section-head{ max-width:760px;margin:0 auto clamp(2rem,4vw,3rem);text-align:center; }
+.section-label{
+  display:inline-block;font-family:'Rubik';font-weight:700;text-transform:uppercase;
+  letter-spacing:2px;font-size:.78rem;color:var(--rouge);margin-bottom:.6rem;
+}
+.section-label--light{ color:var(--jaune); }
+.section-intro{ font-size:1.08rem;margin-top:.8rem; }
+.section-intro--light{ color:var(--blanc);opacity:.95; }
+
+/* ---------- Le lieu ---------- */
+.qualites{ max-width:var(--maxw);margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem; }
+.qualite{ background:#fff;border-radius:var(--r);padding:2rem 1.6rem;text-align:center;box-shadow:var(--shadow);border-bottom:5px solid var(--rouge); }
+.qualite:nth-child(2){ border-color:var(--bleu); }
+.qualite:nth-child(3){ border-color:var(--jaune); }
+.qualite__ico{ font-size:2.6rem;margin-bottom:.6rem; }
+.qualite h3{ font-family:'Rubik';font-weight:700;color:var(--bleu);margin-bottom:.5rem;font-size:1.2rem; }
+
+.soeurs{ max-width:var(--maxw);margin:clamp(2.5rem,5vw,4rem) auto 0;display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(2rem,4vw,3.5rem);align-items:center; }
+.soeurs__text p{ margin-bottom:1rem; }
+.soeurs__text .section-label{ margin-bottom:.3rem; }
+.soeurs__text .display{ margin-bottom:1rem; }
+blockquote{
+  border-left:5px solid var(--rouge);padding:.6rem 0 .6rem 1.2rem;
+  font-style:italic;font-size:1.1rem;color:var(--bleu);
+}
+
+/* ---------- La carte ---------- */
+.carte{ background:var(--rouge);color:var(--blanc); }
+.tabs{ max-width:var(--maxw);margin:0 auto 2rem;display:flex;gap:.6rem;flex-wrap:wrap;justify-content:center; }
+.tab{
+  font-family:'Rubik';font-weight:700;font-size:.95rem;
+  background:transparent;color:var(--blanc);
+  border:2.5px solid var(--blanc);border-radius:999px;
+  padding:.5rem 1.2rem;cursor:pointer;transition:.15s;
+}
+.tab:hover{ transform:translateY(-2px); }
+.tab.is-active{ background:var(--jaune);color:var(--noir);border-color:var(--jaune); }
+.tab-panel{ display:none;max-width:var(--maxw);margin:0 auto;animation:fade .3s ease; }
+.tab-panel.is-active{ display:block; }
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.menu-grid{ display:grid;grid-template-columns:1fr 1fr;gap:1.5rem; }
+.menu-grid--three{ grid-template-columns:repeat(3,1fr); }
+.menu-col{ background:var(--blanc);color:var(--noir);border-radius:var(--r);padding:1.8rem 1.6rem; }
+.menu-col__title{ font-family:'Antonio';font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--rouge);font-size:1.5rem;margin-bottom:.8rem; }
+.menu-col__title em{ font-style:italic;color:var(--vert);font-size:1rem; }
+.menu-col__note{ font-size:.88rem;color:#6b5d5d;margin-top:.8rem; }
+.menu-subhead{ font-family:'Rubik';font-weight:700;color:var(--bleu);margin:1.1rem 0 .4rem;font-size:1rem; }
+.menu-list{ list-style:none; }
+.menu-list li{ display:flex;justify-content:space-between;gap:1rem;padding:.38rem 0;border-bottom:1px dotted rgba(40,32,32,.18);font-size:.96rem; }
+.menu-list li:last-child{ border-bottom:none; }
+.menu-list li b{ font-family:'Rubik';font-weight:700;color:var(--rouge);white-space:nowrap; }
+.menu-list__sub{ font-size:.85rem;color:#6b5d5d; }
+.menu-list__sub b{ color:#6b5d5d; }
+.menu-list--compact li{ padding:.28rem 0; }
+.carte__foot{ text-align:center;max-width:var(--maxw);margin:2rem auto 0;font-size:.9rem;opacity:.9; }
+
+/* ---------- Ateliers ---------- */
+.cards{ max-width:var(--maxw);margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem; }
+.card{ border-radius:var(--r);padding:2rem 1.7rem;box-shadow:var(--shadow); }
+.card h3{ font-family:'Rubik';font-weight:700;font-size:1.3rem;color:var(--bleu);margin-bottom:.6rem; }
+.card--rose{ background:var(--rose); }
+.card--bleuclair{ background:var(--bleu-clair); }
+.card--jaune{ background:var(--jaune); }
+
+/* ---------- Instagram ---------- */
+.insta{ background:#fff; }
+.insta__grid{ max-width:var(--maxw);margin:0 auto;display:grid;grid-template-columns:400px 1fr;gap:clamp(1.5rem,4vw,3rem);align-items:start; }
+.insta__embed{ position:relative;border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);border:3px solid var(--rose);background:var(--rose); }
+.insta__embed iframe{ position:relative;z-index:1;width:100%;height:850px;border:0;display:block;background:transparent; }
+.insta__quote{ position:absolute;inset:0;height:850px;display:flex;flex-direction:column;justify-content:center;gap:.8rem;padding:2rem 1.6rem;border:0;color:var(--noir);font-style:normal;font-size:1.05rem;text-align:center;
+  background:repeating-linear-gradient(90deg, var(--rouge) 0 22px, var(--rose) 22px 44px); }
+.insta__quote p,.insta__quote cite{ background:var(--blanc);border-radius:12px;padding:.6rem .9rem;display:block; }
+.insta__quote-tada{ font-family:'Rubik';font-weight:900;font-size:1.6rem;color:var(--bleu); }
+.insta__quote cite{ font-family:'Rubik';font-weight:600;font-size:.85rem;color:var(--bleu);font-style:normal; }
+.insta__fallback{ position:relative;z-index:1;background:#fff; }
+.insta__fallback{ display:block;text-align:center;font-family:'Rubik';font-weight:600;font-size:.88rem;color:var(--bleu);padding:.7rem;border-top:1px solid rgba(40,32,32,.08);text-decoration:none; }
+.insta__fallback:hover{ color:var(--rouge); }
+.insta__tiles{ display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem; }
+.insta__tiles a{ display:block;aspect-ratio:1/1;border-radius:12px;overflow:hidden;box-shadow:var(--shadow);transition:transform .15s ease; }
+.insta__tiles a:hover{ transform:rotate(-2deg) scale(1.03); }
+.insta__tiles img{ width:100%;height:100%;object-fit:cover; }
+.insta__more{
+  display:grid !important;place-items:center;text-align:center;text-decoration:none;
+  background:var(--jaune);color:var(--noir);font-family:'Rubik';font-weight:900;font-style:italic;font-size:1.05rem;line-height:1.1;
+}
+.insta__follow{ display:block;text-align:center;margin-top:1.2rem; }
+.insta__hint{ text-align:center;font-size:.88rem;color:#6b5d5d;margin-top:.7rem; }
+
+/* ---------- Privatisation / événements ---------- */
+.evenements{ background:var(--vert);color:var(--blanc); }
+.evenements__inner{ max-width:var(--maxw);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,4vw,3.5rem);align-items:start; }
+.evenements__text p{ margin-bottom:1rem;opacity:.96; }
+.evenements__text .display{ margin:.4rem 0 1rem; }
+.evenements__list{ list-style:none;margin-bottom:1rem; }
+.evenements__list li{ padding:.5rem 0;border-bottom:1px solid rgba(240,235,235,.25); }
+.evenements__list strong{ color:var(--jaune); }
+.evenements__cap{ font-size:.92rem;opacity:.85; }
+
+/* form */
+.resa{ --field-h:calc(1.35em + 1.3rem + 4px);background:var(--blanc);color:var(--noir);border-radius:var(--r);padding:clamp(1.5rem,3vw,2.2rem);box-shadow:var(--shadow); }
+.resa__title{ font-family:'Antonio';font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--rouge);font-size:1.45rem;margin-bottom:1.2rem;line-height:1.05; }
+.resa label{ display:block;min-width:0;font-family:'Rubik';font-weight:500;font-size:.9rem;color:var(--bleu);margin-bottom:.9rem; }
+.resa input,.resa select,.resa textarea{
+  width:100%;max-width:100%;min-width:0;margin-top:.3rem;padding:.65rem .8rem;
+  font-family:'Inter',sans-serif;font-size:.98rem;line-height:1.35;color:var(--noir);
+  border:2px solid rgba(47,64,136,.25);border-radius:10px;background:#fff;
+  transition:border-color .15s;
+}
+/* hauteur commune à tous les contrôles d'une ligne (input, select, date) */
+.resa input,.resa select{ min-height:var(--field-h); }
+/* iOS : les champs date gardent une largeur intrinsèque qui déborde de la grille */
+.resa input[type="date"]{
+  -webkit-appearance:none;appearance:none;
+  height:var(--field-h);text-align:left;
+}
+.resa input[type="date"]::-webkit-date-and-time-value{ text-align:left;margin:0; }
+.resa input[type="date"]::-webkit-calendar-picker-indicator{ margin-left:auto; }
+.resa input:focus,.resa select:focus,.resa textarea:focus{ outline:none;border-color:var(--rouge); }
+.resa textarea{ resize:vertical; }
+.resa__grid{ display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0 1rem; }
+.resa .btn--block{ margin-top:.4rem; }
+.resa__hint{ font-size:.88rem;color:#6b5d5d;margin:-.6rem 0 1.1rem; }
+.resa__direct{ display:flex;gap:1.2rem;justify-content:center;margin-top:.8rem;font-family:'Rubik';font-weight:500;font-size:.9rem; }
+.resa__direct a{ color:var(--rouge);text-decoration:none; }
+.resa__direct a:hover{ text-decoration:underline; }
+.resa input.invalid,.resa select.invalid{ border-color:var(--rouge);background:#fff4f3; }
+
+/* ---------- Infos ---------- */
+.infos__grid{ max-width:var(--maxw);margin:0 auto;display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(2rem,4vw,3rem);align-items:stretch; }
+.infos__col h3{ font-family:'Rubik';font-weight:700;color:var(--rouge);margin:1.4rem 0 .4rem;font-size:1.15rem; }
+.infos__col h3:first-child{ margin-top:0; }
+.infos__col a{ color:var(--bleu);font-weight:600; }
+.infos__small{ font-size:.88rem;color:#6b5d5d; }
+.hours{ list-style:none; }
+.hours li{ display:flex;justify-content:space-between;gap:1rem;padding:.3rem 0;border-bottom:1px dotted rgba(40,32,32,.18);max-width:340px; }
+.hours li b{ font-family:'Rubik';font-weight:700;color:var(--bleu); }
+.hours__event{ background:var(--jaune);margin-top:.5rem;padding:.4rem .6rem !important;border-radius:8px;border-bottom:none !important; }
+.hours__event b a{ color:var(--noir);text-decoration:underline;text-underline-offset:2px; }
+.infos__map{ border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);min-height:340px; }
+.infos__map iframe{ width:100%;height:100%;min-height:340px;border:0; }
+
+/* ---------- Footer ---------- */
+.footer{ background:var(--noir);color:var(--blanc);padding:3rem 1.5rem 2.5rem;text-align:center; }
+.footer__inner{ max-width:var(--maxw);margin:0 auto; }
+.footer__logo-img{ height:46px;width:auto;margin:0 auto; }
+.footer__tag{ font-family:'Rubik';font-weight:500;margin:.8rem 0 1.2rem;color:var(--jaune); }
+.footer__links{ display:flex;gap:1.4rem;justify-content:center;flex-wrap:wrap;margin-bottom:1.5rem; }
+.footer__links a{ color:var(--blanc);text-decoration:none;font-family:'Rubik';font-weight:500;font-size:.95rem; }
+.footer__links a:hover{ color:var(--jaune); }
+.footer__legal{ font-size:.78rem;opacity:.6;line-height:1.7; }
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media (max-width:900px){
+  .brunch__inner,.soeurs,.evenements__inner,.infos__grid{ grid-template-columns:1fr; }
+  .menu-grid,.menu-grid--three,.qualites,.cards{ grid-template-columns:1fr; }
+  /* right:-10px plus la rotation de -12deg poussaient le tampon a 393 px sur un
+     ecran de 390 : la page entiere se decalait de 3 px horizontalement. Il
+     chevauche toujours le coin de la photo, sans sortir de l'ecran. */
+  .brunch__stamp{ width:96px;height:96px;font-size:.9rem;left:auto;right:0;bottom:-16px; }
+  .soeurs__photo{ order:2; }
+  .braderie__inner{ grid-template-columns:1fr; }
+  .braderie__menu{ grid-template-columns:1fr; }
+  .braderie__photo{ min-height:240px; }
+  .insta__grid{ grid-template-columns:1fr; }
+  .insta__embed{ max-width:440px;margin:0 auto; }
+  .braderie__visual{ padding:4.4rem 0 .5rem;justify-content:flex-start; }
+  .tampon--big{ width:110px;height:110px;font-size:.88rem;right:0;top:-18px; }
+  .carte-gallery{ grid-template-columns:1fr 1fr; }
+}
+/* le menu complet tenait sur une seule ligne jusqu'a ~900px seulement :
+   en portrait tablette (768-820) il s'enroulait sur deux lignes */
+@media (max-width:900px){
+  .nav__panel{ display:none; }
+  .nav__burger{ display:flex;margin-left:auto; }
+  .nav.is-open .nav__panel{
+    display:block;position:absolute;top:100%;left:0;right:0;
+    background:var(--blanc);padding:1.2rem 1.5rem 1.5rem;border-bottom:3px solid var(--bleu);
+  }
+  .nav.is-open .nav__links{ display:flex;flex-direction:column;gap:.6rem;margin:0; }
+  .nav.is-open .btn--nav{ display:inline-flex;margin-top:1.1rem; }
+}
+@media (max-width:760px){
+  .hero__swatches span{ height:10px; }
+  .marquee__item{ font-size:.88rem;padding:.38rem .8rem; }
+  .braderie__dates{ gap:.5rem;flex-wrap:wrap;justify-content:center; }
+  .braderie__cols{ grid-template-columns:1fr; }
+  .braderie__day{ width:92px;padding:.8rem .3rem .9rem; }
+  .brunch__list{ grid-template-columns:1fr; }
+  .resa__grid{ grid-template-columns:minmax(0,1fr); }
+}
+
+/* Le h1 ne portait qu'une image : le titre de la page etait vide de texte, seul des
+   neuf sites de l'atelier dans ce cas. Le logo reste, le titre revient — masque a
+   l'oeil, lu par les lecteurs d'ecran et les moteurs. L'alt de l'image passe a vide
+   parce que le texte adjacent porte desormais l'information : sinon elle est
+   annoncee deux fois de suite. */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+
+/* bandeau de consentement (mesure d'audience) — caché tant que DADA_GA_ID n'est pas posé */
+.consent{
+  position:fixed;left:50%;bottom:1rem;transform:translateX(-50%);z-index:200;
+  width:min(92vw,560px);background:var(--blanc);color:var(--noir);
+  border:2.5px solid var(--bleu);border-radius:var(--r);box-shadow:5px 5px 0 var(--bleu);
+  padding:1rem 1.1rem;display:flex;flex-direction:column;gap:.8rem;
+}
+.consent[hidden]{ display:none; }
+.consent p{ font-size:.92rem;line-height:1.4;margin:0; }
+.consent__btns{ display:flex;gap:.6rem;flex-wrap:wrap; }
+.consent__btns .btn{ padding:.55rem 1.1rem;font-size:.92rem; }
