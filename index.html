@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DADA Cafétéria Lille — café, cafétéria &amp; bar</title>
-  <meta name="description" content="DADA, café vivant au cœur de Lille (169 rue Pierre Mauroy). Produits frais, pour la majorité locaux et bio, faits maison. Cafétéria le midi, brunch certains samedis, bar le soir.">
+  <meta name="description" content="DADA, café vivant au cœur de Lille (169 rue Pierre Mauroy). Produits frais, pour la majorité locaux et bio, faits maison. Cafétéria le midi, bar le soir.">
   <meta property="og:title" content="DADA — Café, cafétéria & bar à Lille">
-  <meta property="og:description" content="Produits frais, locaux et bio, faits maison. Cafétéria le midi, brunch certains samedis, bar le soir.">
+  <meta property="og:description" content="Produits frais, locaux et bio, faits maison. Cafétéria le midi, bar le soir.">
   <meta property="og:type" content="restaurant">
   <meta property="og:url" content="https://dadacafeteria.github.io/">
   <meta property="og:image" content="https://dadacafeteria.github.io/assets/og-dada.jpg">
@@ -30,7 +30,7 @@
     "alternateName": "DADA — Café, cafétéria & bar à Lille",
     "url": "https://dadacafeteria.github.io/",
     "image": "https://dadacafeteria.github.io/assets/og-dada.jpg",
-    "description": "Café vivant au cœur de Lille : produits frais, pour la majorité locaux et bio, faits maison. Cafétéria le midi, brunch certains samedis, bar le soir.",
+    "description": "Café vivant au cœur de Lille : produits frais, pour la majorité locaux et bio, faits maison. Cafétéria le midi, bar le soir.",
     "servesCuisine": "Cuisine maison — produits frais, locaux et bio",
     "address": {
       "@type": "PostalAddress",
@@ -61,7 +61,7 @@
 <body>
 
   <!-- ================= BRADERIE (temporaire) : défilant + section #braderie + ligne horaires.
-       Tout ce qui porte data-until se cache seul à la date indiquée (défilant le 7, section et horaires le 8, fermeture le 10) (cf. main.js).
+       Tout ce qui porte data-until se cache seul à la date indiquée (défilant, section et horaires Braderie le 7, lundi le 8, fermeture le 10) (cf. main.js).
        À retirer du HTML/CSS après la Braderie. -->
   <a class="marquee" href="#braderie" data-until="2026-09-07" aria-label="Braderie de Lille, dès vendredi soir : DADA est sur le parcours, 169 rue Pierre Mauroy">
     <div class="marquee__track" aria-hidden="true"><span class="marquee__item">★ Tout est braderie&nbsp;!</span><span class="marquee__item">Dès vendredi soir</span><span class="marquee__item">Chiner, c'est bien. Chiner le ventre plein, c'est dada.</span><span class="marquee__item">On est sur le parcours · 169 rue Pierre Mauroy</span><span class="marquee__item">La braderie, oui. Brader le fait maison, jamais.</span><span class="marquee__item">★ Tout est braderie&nbsp;!</span><span class="marquee__item">Dès vendredi soir</span><span class="marquee__item">Chiner, c'est bien. Chiner le ventre plein, c'est dada.</span><span class="marquee__item">On est sur le parcours · 169 rue Pierre Mauroy</span><span class="marquee__item">La braderie, oui. Brader le fait maison, jamais.</span></div>
@@ -76,7 +76,6 @@
     <nav class="nav__links" aria-label="Navigation principale">
       <a href="#lieu">Le lieu</a>
       <a href="#carte">La carte</a>
-      <a href="#brunch">Le brunch</a>
       <a href="#ateliers">Ateliers</a>
       <a href="#evenements">Privatisation</a>
       <a href="#instagram">Insta</a>
@@ -99,7 +98,6 @@
       <p class="hero__sub">Produits frais, pour la majorité locaux et bio, du fait maison et un petit vent de liberté — ouvert du lundi au samedi, 169 rue Pierre Mauroy.</p>
       <div class="hero__cta">
         <a href="#carte" class="btn btn--primary">Voir la carte</a>
-        <a href="#brunch" class="btn btn--ghost">⭐ Le brunch DADA</a>
       </div>
     </div>
     <div class="hero__swatches" aria-hidden="true">
@@ -113,7 +111,7 @@
   </section>
 
   <!-- ================= BRADERIE (temporaire, data-until) ================= -->
-  <section class="braderie" id="braderie" data-until="2026-09-08">
+  <section class="braderie" id="braderie" data-until="2026-09-07">
     <div class="braderie__inner">
       <div class="braderie__text">
         <span class="section-label section-label--light">Braderie de Lille · 4 → 6 septembre</span>
@@ -123,14 +121,13 @@
           <a href="#menu-braderie" class="btn btn--jaune">Le menu Braderie</a>
           <a href="https://www.google.com/maps/dir/?api=1&amp;destination=169+rue+Pierre+Mauroy,+59800+Lille" target="_blank" rel="noopener" class="btn btn--ghost btn--ghost-light">Itinéraire</a>
         </div>
-        <p class="braderie__note">Lundi 7, on ouvre de 11h à 15h, puis on récupère&nbsp;: <strong>fermé mardi 8 et mercredi 9</strong>. Un an jour pour jour que DADA existe&nbsp;: on fête ça avec vous.</p>
+        <p class="braderie__note">Lundi 7, on rouvre tranquillement de 11h à 15h, puis on récupère&nbsp;: <strong>fermé mardi 8 et mercredi 9</strong>. Un an jour pour jour que DADA existe&nbsp;: on fête ça avec vous.</p>
       </div>
       <div class="braderie__visual">
         <div class="braderie__dates" aria-label="Horaires de la Braderie">
           <span class="braderie__day"><b>Ven.</b><em>4</em><small>9h → 2h</small></span>
           <span class="braderie__day"><b>Sam.</b><em>5</em><small>8h → 2h</small></span>
           <span class="braderie__day"><b>Dim.</b><em>6</em><small>8h → 21h</small></span>
-          <span class="braderie__day"><b>Lun.</b><em>7</em><small>11h → 15h</small></span>
         </div>
         <span class="tampon tampon--big" aria-hidden="true">Chine<br>que<br>chine&nbsp;!</span>
       </div>
@@ -402,43 +399,6 @@
     <p class="carte__foot">Carte indicative, susceptible d'évoluer au fil des saisons et des envies. 🐎</p>
   </section>
 
-  <!-- ================= BRUNCH HERO ================= -->
-  <section class="brunch" id="brunch">
-    <div class="brunch__inner">
-      <div class="brunch__text">
-        <span class="badge badge--jaune">Certains samedis</span>
-        <h2 class="display display--white">LE BRUNCH<br>DADA</h2>
-        <p class="brunch__when">Certains samedis · 11h30 – 15h · Formule à 24€ · dates annoncées sur Instagram</p>
-        <p class="brunch__desc">
-          Le rendez-vous du week-end : pains grillés au levain, œufs comme on les aime,
-          pancakes maison, boissons artisanales et le café qu'il vous faut.
-          Sucré, salé, végé, végan, sans gluten — il y en a pour tout le monde.
-          On s'installe, on partage, on prend le temps.
-        </p>
-        <ul class="brunch__list">
-          <li>Pains grillés &amp; tartines généreuses</li>
-          <li>Œufs &amp; petits plats du moment</li>
-          <li>Douceurs maison de la semaine</li>
-          <li>Boissons artisanales &amp; café</li>
-        </ul>
-        <div class="brunch__cta">
-          <a href="#reserver" class="btn btn--jaune">Réserver ma table</a>
-          <span class="brunch__note">Places limitées — réservation conseillée</span>
-        </div>
-      </div>
-      <div class="brunch__visual">
-        <div class="brunch__gallery">
-          <img src="assets/brunch-table.jpg" alt="Table de brunch DADA : plats du jour, kombucha et douceurs maison" class="bg-main" loading="lazy">
-          <img src="assets/brunch-toast.jpg" alt="Tartine d'avocat sur quinoa — brunch DADA" loading="lazy">
-          <img src="assets/brunch-dessert.jpg" alt="Cheesecake caramel maison" loading="lazy">
-        </div>
-        <div class="brunch__stamp">
-          <span>Croûte<br>que<br>croûte</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- ================= ATELIERS ================= -->
   <section class="ateliers" id="ateliers">
     <div class="section-head">
@@ -482,12 +442,12 @@
       </div>
       <div class="insta__side">
         <div class="insta__tiles" aria-label="Photos de DADA sur Instagram">
-          <a href="https://www.instagram.com/dadacafeteria/" target="_blank" rel="noopener"><img src="assets/brunch-table.jpg" alt="Table de brunch DADA" loading="lazy"></a>
+          <a href="https://www.instagram.com/dadacafeteria/" target="_blank" rel="noopener"><img src="assets/brunch-table.jpg" alt="Table garnie : plats du jour, kombucha et douceurs maison" loading="lazy"></a>
           <a href="https://www.instagram.com/dadacafeteria/" target="_blank" rel="noopener"><img src="assets/plat-couscous.jpg" alt="Couscous-tagine, plat du jour" loading="lazy"></a>
           <a href="https://www.instagram.com/dadacafeteria/" target="_blank" rel="noopener"><img src="assets/equipe.jpg" alt="L'équipe DADA devant le café" loading="lazy"></a>
           <a href="https://www.instagram.com/dadacafeteria/" target="_blank" rel="noopener"><img src="assets/brunch-dessert.jpg" alt="Cheesecake caramel maison" loading="lazy"></a>
           <a href="https://www.instagram.com/dadacafeteria/" target="_blank" rel="noopener"><img src="assets/plat-chou-fleur.jpg" alt="Chou-fleur rôti" loading="lazy"></a>
-          <a href="https://www.instagram.com/dadacafeteria/" target="_blank" rel="noopener"><img src="assets/brunch-toast.jpg" alt="Tartine d'avocat, brunch" loading="lazy"></a>
+          <a href="https://www.instagram.com/dadacafeteria/" target="_blank" rel="noopener"><img src="assets/brunch-toast.jpg" alt="Tartine d'avocat sur quinoa" loading="lazy"></a>
           <a href="https://www.instagram.com/dadacafeteria/" target="_blank" rel="noopener"><img src="assets/plat-curry.jpg" alt="Curry de légumes" loading="lazy"></a>
           <a href="https://www.instagram.com/dadacafeteria/" target="_blank" rel="noopener"><img src="assets/plat-bourguignon.jpg" alt="Bœuf mijoté façon bourguignon" loading="lazy"></a>
           <a href="https://www.instagram.com/dadacafeteria/" target="_blank" rel="noopener" class="insta__more">+ la suite<br>sur Insta</a>
@@ -512,7 +472,7 @@
         </p>
         <ul class="evenements__list">
           <li><strong>Soirées privées</strong> — cocktails, en-cas à partager, bar à bières &amp; vins nature</li>
-          <li><strong>Anniversaires &amp; brunchs de groupe</strong> — sur place, faits maison</li>
+          <li><strong>Anniversaires &amp; repas de groupe</strong> — sur place, faits maison</li>
           <li><strong>Concerts &amp; événements</strong> — sur demande, le soir</li>
           <li><strong>Ateliers créatifs sur mesure</strong> — pour souder vos équipes autrement</li>
         </ul>
@@ -523,7 +483,7 @@
       <div class="evenements__form" id="reserver">
         <form id="resa-form" class="resa" novalidate>
           <h3 class="resa__title">Demande de réservation / privatisation</h3>
-          <p class="resa__hint">Réservations &amp; privatisations le soir, sur demande. Le brunch a lieu certains samedis (11h30 – 15h), dates sur Instagram.</p>
+          <p class="resa__hint">Réservations &amp; privatisations le soir, sur demande.</p>
 
           <div class="resa__row">
             <label>Nom &amp; prénom
@@ -542,9 +502,6 @@
             <label>Votre demande
               <select name="type" required>
                 <option value="">Choisir…</option>
-                <optgroup label="Brunch">
-                  <option>Brunch (un samedi)</option>
-                </optgroup>
                 <optgroup label="Privatisation (buffet ou sur mesure)">
                   <option>Soirée privée</option>
                   <option>Anniversaire</option>
@@ -565,7 +522,6 @@
             <label>Créneau
               <select name="creneau">
                 <option value="">Choisir…</option>
-                <option>Brunch, un samedi (11h30 – 15h)</option>
                 <option>Soirée (à partir de 19h)</option>
                 <option>Autre — à préciser</option>
               </select>
@@ -604,7 +560,8 @@
           <li><span>Vendredi</span><b>9h – minuit</b></li>
           <li><span>Samedi</span><b>11h30 – 15h</b></li>
           <li><span>Dimanche</span><b>Fermé</b></li>
-          <li class="hours__event" data-until="2026-09-08"><span>Braderie · ven. 4 → lun. 7</span><b>ven 9h–2h · sam 8h–2h · dim 8h–21h · lun 11h–15h</b></li>
+          <li class="hours__event" data-until="2026-09-07"><span>Braderie · ven. 4 → dim. 6</span><b>ven 9h–2h · sam 8h–2h · dim 8h–21h</b></li>
+          <li class="hours__event" data-until="2026-09-08"><span>Lundi 7</span><b>11h – 15h</b></li>
           <li class="hours__event" data-until="2026-09-10"><span>Après la Braderie</span><b>fermé mar. 8 &amp; mer. 9</b></li>
         </ul>
         <p class="infos__small"><strong>Le soir</strong>, bar et privatisations sur demande&nbsp;; de temps en temps un concert ou un spectacle. L'agenda est sur Instagram.</p>
@@ -631,7 +588,6 @@
       <p class="footer__tag">Tout est dada. Tout est fait maison — cuisine éthique pour tous.</p>
       <div class="footer__links">
         <a href="#carte">La carte</a>
-        <a href="#brunch">Le brunch</a>
         <a href="#evenements">Privatisation</a>
         <a href="https://www.instagram.com/dadacafeteria/" target="_blank" rel="noopener">Instagram</a>
       </div>
