@@ -53,16 +53,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,700;0,900;1,900&family=Antonio:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/styles.css?v=65ccd289">
+  <link rel="stylesheet" href="assets/styles.css?v=c2826045">
 </head>
 <body>
 
-  <!-- ================= BRADERIE (temporaire) : défilant + section #braderie + ligne horaires.
-       Tout ce qui porte data-until se cache seul à la date indiquée (défilant, section et horaires Braderie le 7, lundi le 8, fermeture le 10) (cf. main.js).
-       À retirer du HTML/CSS après la Braderie. -->
-  <a class="marquee" href="#braderie" data-until="2026-09-07" aria-label="Braderie de Lille, dès vendredi soir : DADA est sur le parcours, 169 rue Pierre Mauroy">
-    <div class="marquee__track" aria-hidden="true"><span class="marquee__item">★ Tout est braderie&nbsp;!</span><span class="marquee__item">Dès vendredi soir</span><span class="marquee__item">Chiner, c'est bien. Chiner, c'est Dada&nbsp;!</span><span class="marquee__item">On est sur le parcours · 169 rue Pierre Mauroy</span><span class="marquee__item">La braderie, oui. Brader le fait maison, jamais.</span><span class="marquee__item">★ Tout est braderie&nbsp;!</span><span class="marquee__item">Dès vendredi soir</span><span class="marquee__item">Chiner, c'est bien. Chiner, c'est Dada&nbsp;!</span><span class="marquee__item">On est sur le parcours · 169 rue Pierre Mauroy</span><span class="marquee__item">La braderie, oui. Brader le fait maison, jamais.</span></div>
-  </a>
 
   <!-- ================= NAV ================= -->
   <header class="nav" id="top">
@@ -90,7 +84,7 @@
       <h1 class="hero__logo"><img src="assets/logo-dada.png" alt="" width="1100" height="647">
         <span class="sr-only">DADA — café, cafétéria &amp; bar à Lille</span></h1>
       <p class="hero__tagline">On y <strong class="c-bleu">VIT</strong>, on y <strong class="c-rouge">MANGE</strong>, on y <strong class="c-rouge">CRÉE.</strong></p>
-      <p class="hero__sub">Produits frais et de saison, plats végétariens et vegan, pour la majorité locaux et bio, du fait maison et un petit vent de liberté — ouvert du lundi au vendredi, 169 rue Pierre Mauroy.</p>
+      <p class="hero__sub">Produits frais et de saison, plats végétariens et vegan, pour la majorité locaux et bio, du fait maison et un petit vent de liberté — ouvert du lundi au vendredi, 169 rue Pierre Mauroy. <strong>Sans réservation.</strong></p>
       <div class="hero__cta">
         <a href="#carte" class="btn btn--primary">Voir la carte</a>
       </div>
@@ -105,72 +99,6 @@
     </div>
   </section>
 
-  <!-- ================= BRADERIE (temporaire, data-until) ================= -->
-  <section class="braderie" id="braderie" data-until="2026-09-07">
-    <div class="braderie__inner">
-      <div class="braderie__text">
-        <span class="section-label section-label--light">Braderie de Lille · 4 → 6 septembre</span>
-        <h2 class="display display--white">Tout est<br>braderie.</h2>
-        <p class="braderie__lead">Dès <strong>vendredi</strong> et tout le week-end, DADA est sur le parcours, <strong>169 rue Pierre Mauroy</strong>. Entre deux tas de moules et trois cartons de vieilles BD&nbsp;: café du matin, cafétéria, bar jusqu'à 2h. Chiner, c'est bien. Chiner, c'est Dada&nbsp;!</p>
-        <div class="braderie__cta">
-          <a href="#menu-braderie" class="btn btn--jaune">Le menu Braderie</a>
-          <a href="https://www.google.com/maps/dir/?api=1&amp;destination=169+rue+Pierre+Mauroy,+59800+Lille" target="_blank" rel="noopener" class="btn btn--ghost btn--ghost-light">Itinéraire</a>
-        </div>
-        <p class="braderie__note">Lundi 7, on rouvre tranquillement de 11h à 15h, puis on récupère&nbsp;: <strong>fermé mardi 8 et mercredi 9</strong>. Un an jour pour jour que DADA existe&nbsp;: on fête ça avec vous.</p>
-      </div>
-      <div class="braderie__visual">
-        <div class="braderie__dates" aria-label="Horaires de la Braderie">
-          <span class="braderie__day"><b>Ven.</b><em>4</em><small>9h → 2h</small></span>
-          <span class="braderie__day"><b>Sam.</b><em>5</em><small>8h → 2h</small></span>
-          <span class="braderie__day"><b>Dim.</b><em>6</em><small>8h → 21h</small></span>
-        </div>
-        <span class="tampon tampon--big" aria-hidden="true">Chine<br>que<br>chine&nbsp;!</span>
-      </div>
-    </div>
-
-    <div class="braderie__menu" id="menu-braderie">
-      <div class="braderie__gallery">
-        <figure class="braderie__photo">
-          <img src="assets/team-2026.jpg" alt="L'équipe DADA au complet devant la vitrine, Braderie 2026" loading="lazy">
-          <figcaption>La team, Braderie 2026. Prêtes.</figcaption>
-        </figure>
-        <div class="strip strip--braderie" aria-label="Les sœurs préparent la Braderie">
-          <img src="assets/team-fut.jpg" alt="Marie charge les fûts de Thiriez dans le camion" loading="lazy">
-          <img src="assets/team-cuisine.jpg" alt="Malika en cuisine, une plaque de grenailles à la main" loading="lazy">
-          <img src="assets/team-carole.jpg" alt="Carole en tablier bleu à la porte de DADA" loading="lazy">
-          <img src="assets/team-julie.jpg" alt="Julie, bière à la main, devant la vitrine" loading="lazy">
-        </div>
-      </div>
-      <div class="menu-col braderie__card">
-        <h3 class="menu-col__title">Le menu Braderie</h3>
-        <p class="menu-col__note">Service rapide toute la journée, sur place ou à emporter. Tout est fait maison&nbsp;: végan, végé, carné, sans gluten, sans lactose.</p>
-        <div class="braderie__cols">
-          <div>
-            <h4 class="menu-subhead">Manger</h4>
-            <ul class="menu-list menu-list--compact">
-              <li><span>Gaspacho « vue mer »</span><b>5€</b></li>
-              <li><span>Carbonade flamande, pommes de terre persillées</span><b>16€</b></li>
-              <li><span>Grenailles sautées, crème de maroilles, salade composée, noisettes torréfiées</span><b>15€</b></li>
-              <li><span>Salade betterave-pomme&nbsp;: quinoa, pousses d'épinards, pickles de chioggia, houmous</span><b>14€</b></li>
-              <li><span>Cookies (chicorée, deux chocos, avoine…)</span><b>4€</b></li>
-              <li><span>Cakes (patate douce, spéculoos…)</span><b>4€</b></li>
-            </ul>
-          </div>
-          <div>
-            <h4 class="menu-subhead">Boire</h4>
-            <ul class="menu-list menu-list--compact">
-              <li><span>Bières du Nord</span></li>
-              <li><span>Vins bio</span></li>
-              <li><span>Cocktails</span></li>
-              <li><span>Boissons artisanales</span></li>
-              <li><span>Café &amp; chicorée</span></li>
-            </ul>
-            <p class="menu-col__note">Prix des boissons&nbsp;: voir <a href="#carte">la carte</a>.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- ================= LE LIEU ================= -->
   <!-- « DADA c'est quoi ? » + les 3 qualités retirés le 04/09 : déjà dit dans le hero. -->
@@ -182,6 +110,8 @@
           <figcaption>Carole et Marie, les deux sœurs, derrière le bar.</figcaption>
         </figure>
         <div class="strip strip--soeurs" aria-label="L'équipe">
+          <img src="assets/team-carole.jpg" alt="Carole en tablier bleu à la porte de DADA" loading="lazy">
+          <img src="assets/team-fut.jpg" alt="Marie charge les fûts de Thiriez" loading="lazy">
           <img src="assets/team-malika.jpg" alt="Malika devant le café" loading="lazy">
           <img src="assets/team-julie.jpg" alt="Julie, bière à la main, devant la vitrine" loading="lazy">
         </div>
@@ -190,14 +120,16 @@
         <span class="section-label">Dada, c'est qui&nbsp;?</span>
         <h3 class="display display--sm">Une équipe, une famille</h3>
         <p>
-          DADA, c'est avant tout une équipe soudée qui fait vivre le lieu au quotidien.
-          Carole et Marie ont lancé le projet&nbsp;; à leurs côtés, une petite bande passionnée,
-          entre cuisine, salle et création.
+          DADA, c'est quatre femmes qui tiennent le lieu au quotidien. <strong>Carole</strong> et
+          <strong>Marie</strong>, les deux sœurs, ont ouvert le café et n'en sont pas sorties depuis&nbsp;:
+          la cuisine, le bar, la salle, la carte, les murs — elles y sont tous les jours,
+          les mains dedans.
         </p>
         <p>
-          En cuisine, <strong>Malika</strong> signe des pâtisseries incroyables et une cuisine 100&nbsp;% maison
-          (inspirations thaï, italienne, coréenne, française). En salle, <strong>Julie</strong>, artiste dans l'âme,
-          suit le projet depuis les premiers jours et infuse le lieu de sa créativité — déco, ateliers, clins d'œil arty.
+          <strong>Malika</strong> et <strong>Julie</strong> font tourner la maison avec elles.
+          Les plats du jour, les gâteaux, les inspirations (thaï, italienne, coréenne, française),
+          les ateliers, ce qu'on accroche aux murs&nbsp;: ça se décide à quatre, souvent entre deux
+          services. Personne n'a de rôle gravé dans le marbre — c'est un peu ça, l'esprit dada.
         </p>
       </div>
     </div>
@@ -411,9 +343,6 @@
         <ul class="hours">
           <li><span>Lundi</span><b>11h – 19h</b></li>
           <li><span>Mardi – Vendredi</span><b>9h – 19h</b></li>
-          <li class="hours__event" data-until="2026-09-07"><span>Braderie · ven. 4 → dim. 6</span><b>ven 9h–2h · sam 8h–2h · dim 8h–21h</b></li>
-          <li class="hours__event" data-until="2026-09-08"><span>Lundi 7</span><b>11h – 15h</b></li>
-          <li class="hours__event" data-until="2026-09-10"><span>Après la Braderie</span><b>fermé mar. 8 &amp; mer. 9</b></li>
         </ul>
         <p class="infos__small"><strong>Le soir</strong>, il arrive qu'on reste ouvert&nbsp;: l'agenda est sur Instagram.</p>
 
